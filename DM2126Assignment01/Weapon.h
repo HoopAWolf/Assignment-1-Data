@@ -7,7 +7,7 @@ class Weapon : public Item
 {
 public:
 	Weapon(const string &nameInput, const int &durabilityInput, const int &damageInput)
-		: Item(nameInput, durabilityInput), kAttackDmg(((damageInput < 0) ? 0 : damageInput))
+		: Item(nameInput, ((durabilityInput < 0) ? 0 : durabilityInput)), kAttackDmg(((damageInput < 0) ? 0 : damageInput))
 	{};
 
 	~Weapon();

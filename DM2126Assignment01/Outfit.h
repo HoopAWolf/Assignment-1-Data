@@ -7,7 +7,7 @@ class Outfit : public Item
 {
 public:
 	Outfit(const string &nameInput, const int &durabilityInput, const int &SPECIALInput) 
-		: Item(nameInput, durabilityInput), kSPECIAL(SPECIALInput) 
+		: Item(nameInput, ((durabilityInput < 0) ? 0 : durabilityInput)), kSPECIAL(SPECIALInput)
 	{};
 
 	~Outfit();
